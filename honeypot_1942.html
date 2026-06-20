@@ -728,7 +728,9 @@ function gameOver(){
   const btns=document.getElementById('stage-select-btns');
   btns.innerHTML='';
   const maxSt=Math.max(maxStageReached,stage);
-  for(let i=1;i<=maxSt;i++){
+  // 현재 스테이지 포함 최근 3개만 표시 (예: 12스테이지면 10,11,12)
+  const startSt=Math.max(1,stage-2);
+  for(let i=startSt;i<=stage;i++){
     const st=i;
     const btn=document.createElement('button');
     btn.className='obtn';
