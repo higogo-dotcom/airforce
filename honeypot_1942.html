@@ -124,7 +124,7 @@ canvas.width=GW; canvas.height=GH;
 canvas.style.maxHeight='100vh';
 canvas.style.width='auto';
 
-function isMobile(){return window.innerWidth<768;}
+function isMobile(){return window.innerWidth<1200||'ontouchstart' in window;}
 
 // ===== 게임 설정 =====
 const STAGES=[
